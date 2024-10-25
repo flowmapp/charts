@@ -1,0 +1,13 @@
+# Seems to work without it
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+      - name: default
+        protocol: layer2
+        addresses:
+        - {{ (index .Values.global.env .Values.global.currentEnv).ip }}/32

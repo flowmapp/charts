@@ -1,0 +1,6 @@
+apiVersion: v2
+name: front
+description: Support application frontend
+type: application
+version: 24.10.21
+appVersion: 24.10.21
