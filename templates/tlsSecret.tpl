@@ -6,6 +6,6 @@ metadata:
   name: tls-flowmapp-wildcard
 type: kubernetes.io/tls
 data:
-  tls.crt: {{ .Values.tlsCertBase64 }}
-  tls.key: {{ .Values.tlsKeyBase64 }}
+  tls.crt: {{ .Values.global.tlsCertBase64 }}
+  tls.key: {{ .Values.global.tlsKeyBase64 }}
 {{- end }}
