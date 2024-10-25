@@ -1,5 +1,0 @@
-global:
-  namespace: app
-  env:
-    dev:
-      localDB: true

@@ -1,3 +1,0 @@
-{{- if (index .Values.global.env .Values.global.currentEnv).localDB }}
-{{- template "fm.deployment" . }}
-{{- end }}

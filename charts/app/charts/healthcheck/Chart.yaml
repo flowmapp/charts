@@ -1,6 +1,0 @@
-apiVersion: v2
-name: healthcheck
-description: Main app healthcheck
-type: application
-version: 24.10.23
-appVersion: 24.10.23
