@@ -6,8 +6,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: 'false'
 spec:
+  ingressClassName: nginx
   rules:
-  - host: health.us.flowmapp.com
+  - host: health.prod.flowmapp.com
     http:
       paths:
       - path: /health
@@ -17,7 +18,7 @@ spec:
             name: back
             port:
               number: 11443
-  - host: health.ca.flowmapp.com
+  - host: health.fallback.flowmapp.com
     http:
       paths:
       - path: /health
