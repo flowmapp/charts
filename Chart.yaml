@@ -3,4 +3,4 @@ name: helm
 description: A Helm chart for Kubernetes
 type: application
 version: 24.10.21
-appVersion: 24.10.21
+appVersion: "24.10.21"
