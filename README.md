@@ -1,4 +1,4 @@
-Usage (Linux)
+Usage (Linux only)
 ```bash
 helm add flowmapp https://github.com/pages/flowmapp/helm-charts
 helm install flowmapp flowmapp/app \
