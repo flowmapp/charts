@@ -11,6 +11,16 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/app-24.10.23/app-24.10.23.tgz
     version: 24.10.23
+  - apiVersion: v2
+    appVersion: 24.10.22
+    created: "2024-10-25T11:43:11.551167973Z"
+    description: Main app
+    digest: 2357c41769c142501cc1a41a68464265059e6ad5e98a14d3c01f2d1bc68ae03b
+    name: app
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/app-24.10.22/app-24.10.22.tgz
+    version: 24.10.22
   maestro:
   - apiVersion: v2
     appVersion: 24.10.23
@@ -22,4 +32,14 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/maestro-24.10.23/maestro-24.10.23.tgz
     version: 24.10.23
-generated: "2024-10-25T11:39:30.58732906Z"
+  - apiVersion: v2
+    appVersion: 24.10.22
+    created: "2024-10-25T11:43:11.782485218Z"
+    description: Admin panel for support
+    digest: 649eabebcf3390ecc6f4aeb1f08980a568c51bdec3c1e872d366c68cbff0e458
+    name: maestro
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/maestro-24.10.22/maestro-24.10.22.tgz
+    version: 24.10.22
+generated: "2024-10-25T11:43:11.782497511Z"
