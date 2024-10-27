@@ -1,6 +1,0 @@
-apiVersion: v2
-name: front
-description: Main app frontend
-type: application
-version: 24.10.33
-appVersion: 24.10.33
