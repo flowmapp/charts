@@ -1,0 +1,42 @@
+replicas: 1
+
+port: 80
+
+annotations:
+  cert-manager.io/cluster-issuer: letsencrypt
+# TODO: FIX THIS!!!!!!!!!!
+#  nginx.ingress.kubernetes.io/configuration-snippet: |
+#    more_set_headers "X-Frame-Options: DENY";
+
+startupProbe:
+  httpGet:
+    scheme: HTTP
+    path: /
+    port: 80
+  initialDelaySeconds: 5
+  timeoutSeconds: 5
+  failureThreshold: 60
+  periodSeconds: 5
+
+readinessProbe:
+  httpGet:
+    scheme: HTTP
+    path: /
+    port: 80
+  initialDelaySeconds: 5
+  periodSeconds: 30
+  timeoutSeconds: 30
+
+env:
+  prod:
+    image: flowmapp/app-front
+    host: app.flowmapp.com
+    secretName: tls-flowmapp-wildcard
+  staging:
+    image: flowmapp/app-front-staging
+    host: app.staging.flowmapp.com
+    secretName: tls-front
+  dev:
+    image: flowmapp/app-front-dev
+    host: app.dev.flowmapp.com
+    secretName: tls-front
