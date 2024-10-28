@@ -1,5 +1,5 @@
 apiVersion: v2
-name: clusterIssuer
+name: clusterissuer
 description: Certificate issuer for cluster
 type: application
 version: 24.10.41
