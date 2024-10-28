@@ -10,4 +10,4 @@ data:
       - name: default
         protocol: layer2
         addresses:
-        - {{ (index .Values.global.env .Values.global.currentEnv).ip }}/32
+        - {{ (index .Values.ip .Values.global.currentEnv) }}/32
