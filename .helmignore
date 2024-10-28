@@ -21,3 +21,13 @@
 .idea/
 *.tmproj
 .vscode/
+
+deployment.yaml
+namespace.yaml
+ingress.yaml
+service.yaml
+# tlsSecret.yaml
+clusterIssuer.yaml
+metallbConfig.yaml
+dockerSecret.yaml
+volume.yaml
