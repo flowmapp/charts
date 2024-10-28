@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   app:
   - apiVersion: v2
+    appVersion: 24.10.35
+    created: "2024-10-28T09:24:40.460888528Z"
+    description: Main app
+    digest: 9ea45b092a5113cef14d58c5df91c0f5047c26122b321d31c4b2b6db6df02dcc
+    name: app
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/app-24.10.35/app-24.10.35.tgz
+    version: 24.10.35
+  - apiVersion: v2
     appVersion: 24.10.34
     created: "2024-10-27T18:26:56.597093618Z"
     description: Main app
@@ -103,6 +113,16 @@ entries:
     version: 24.10.22
   infra:
   - apiVersion: v2
+    appVersion: 24.10.35
+    created: "2024-10-28T09:24:40.624876184Z"
+    description: Auxiliary templates for infrastracture
+    digest: e4e5c3dade8b8e5413b56bd34af9d2b72732d3535fb2d5474f16d623eb6f4742
+    name: infra
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/infra-24.10.35/infra-24.10.35.tgz
+    version: 24.10.35
+  - apiVersion: v2
     appVersion: 24.10.34
     created: "2024-10-27T18:26:56.748251042Z"
     description: Auxiliary templates for infrastracture
@@ -123,6 +143,16 @@ entries:
     - https://github.com/flowmapp/charts/releases/download/infra-24.10.33/infra-24.10.33.tgz
     version: 24.10.33
   maestro:
+  - apiVersion: v2
+    appVersion: 24.10.35
+    created: "2024-10-28T09:24:40.773874026Z"
+    description: Admin panel for support
+    digest: dbaa8209fdedc26f0bef80942c7f42f97540ecd75739cf567a2a9587b6a1a9ec
+    name: maestro
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/maestro-24.10.35/maestro-24.10.35.tgz
+    version: 24.10.35
   - apiVersion: v2
     appVersion: 24.10.34
     created: "2024-10-27T18:26:56.908321088Z"
@@ -223,4 +253,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/maestro-24.10.22/maestro-24.10.22.tgz
     version: 24.10.22
-generated: "2024-10-27T18:26:56.908406888Z"
+generated: "2024-10-28T09:24:40.773997096Z"
