@@ -1,6 +1,0 @@
-apiVersion: v2
-name: infra
-description: Auxiliary templates for infrastracture
-type: application
-version: 24.10.40
-appVersion: 24.10.40
