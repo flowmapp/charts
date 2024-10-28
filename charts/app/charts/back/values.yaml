@@ -30,7 +30,7 @@ readinessProbe:
 env:
   prod:
     image: flowmapp/app-back
-    host: api.flowmapp.com
+    host: api2.flowmapp.com
     secretName: tls-flowmapp-wildcard
   staging:
     image: flowmapp/app-back-staging
