@@ -182,6 +182,17 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/clusterIssuer-24.10.41/clusterIssuer-24.10.41.tgz
     version: 24.10.41
+  clusterissuer:
+  - apiVersion: v2
+    appVersion: 24.10.41
+    created: "2024-10-28T14:16:17.946539085Z"
+    description: Certificate issuer for cluster
+    digest: 450b7fea0c412cc8f216b259246bdf37cb8fb69ceee396da81a08caefc19d424
+    name: clusterissuer
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/clusterissuer-24.10.41/clusterissuer-24.10.41.tgz
+    version: 24.10.41
   infra:
   - apiVersion: v2
     appVersion: 24.10.40
@@ -445,4 +456,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/metallb-24.10.41/metallb-24.10.41.tgz
     version: 24.10.41
-generated: "2024-10-28T14:07:15.936422097Z"
+generated: "2024-10-28T14:16:17.946689817Z"
