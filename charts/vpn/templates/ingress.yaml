@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: vpn
+  name: vpn
+spec:
+  rules:
+  - host: vpn.flowmapp.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vpn
+            ports:
+              number: 500

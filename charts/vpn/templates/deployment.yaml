@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: vpn
+  name: vpn
+  labels:
+    app: vpn
+spec:
+  selector:
+    matchLabels:
+      namespace: vpn
+      app: vpn
+  template:
+    metadata:
+      labels:
+        namespace: vpn
+        app: vpn
+    spec:
+      containers:
+        - image: hwdsl2/ipsec-vpn-server
+          name: vpn
+          securityContext:
+            privileged: true
+          env:
+          - name: VPN_IPSEC_PSK
+            value: {{ .Values.psk }}
+          - name: VPN_USER
+            value: {{ .Values.global.user }}
+          - name: VPN_PASSWORD
+            value: {{ .Values.pass }}
+          ports:
+            - containerPort: 500
+              hostPort: 500
+              name: vpn-isakmp
+              protocol: UDP
+            - containerPort: 4500
+              hostPort: 4500
+              name: vpn-ike
+              protocol: UDP

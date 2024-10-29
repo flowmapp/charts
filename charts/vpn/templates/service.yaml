@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: vpn
+  name: vpn
+spec:
+  selector:
+    namespace: vpn
+    app: vpn
+  type: ClusterIP
+  ports:
+    - port:
+      name: 500-port
+      port: 500
+    - port:
+      name: 4500-port
+      port: 4500

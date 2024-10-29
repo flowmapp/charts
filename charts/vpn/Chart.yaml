@@ -1,0 +1,6 @@
+apiVersion: v2
+name: vpn
+description: VPN server
+type: application
+version: 24.10.47
+appVersion: 24.10.47
