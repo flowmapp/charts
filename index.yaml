@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   app:
   - apiVersion: v2
+    appVersion: 24.10.43
+    created: "2024-10-29T10:30:52.253168386Z"
+    description: Main app
+    digest: 7eb54c70a30505d2e2d2ae0b86d858c846916a4ee65c2bf0530b0acc53c2a4fb
+    name: app
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/app-24.10.43/app-24.10.43.tgz
+    version: 24.10.43
+  - apiVersion: v2
     appVersion: 24.10.42
     created: "2024-10-28T14:17:44.000566056Z"
     description: Main app
@@ -194,6 +204,16 @@ entries:
     version: 24.10.41
   clusterissuer:
   - apiVersion: v2
+    appVersion: 24.10.43
+    created: "2024-10-29T10:30:52.404019313Z"
+    description: Certificate issuer for cluster
+    digest: eb4606eb1cb152b42f9379301eae8e5fc030bf62b757d7ee687cd9bbffb4fec2
+    name: clusterissuer
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/clusterissuer-24.10.43/clusterissuer-24.10.43.tgz
+    version: 24.10.43
+  - apiVersion: v2
     appVersion: 24.10.42
     created: "2024-10-28T14:17:44.198029447Z"
     description: Certificate issuer for cluster
@@ -295,6 +315,16 @@ entries:
     - https://github.com/flowmapp/charts/releases/download/infra-24.10.33/infra-24.10.33.tgz
     version: 24.10.33
   maestro:
+  - apiVersion: v2
+    appVersion: 24.10.43
+    created: "2024-10-29T10:30:52.581125388Z"
+    description: Admin panel for support
+    digest: 7d1a60260b11741e5d01f5f62dd514118d860b751f9da26b7b2c12a0c5a9fd50
+    name: maestro
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/maestro-24.10.43/maestro-24.10.43.tgz
+    version: 24.10.43
   - apiVersion: v2
     appVersion: 24.10.42
     created: "2024-10-28T14:17:44.365346285Z"
@@ -477,6 +507,16 @@ entries:
     version: 24.10.22
   metallb:
   - apiVersion: v2
+    appVersion: 24.10.43
+    created: "2024-10-29T10:30:52.752218099Z"
+    description: Metallb traffic manager for self-hosted k8
+    digest: d5886ff09b87b9ab7f0485f7e3ba5fe275435b688b9c39b133bb5b34725b3a5b
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/metallb-24.10.43/metallb-24.10.43.tgz
+    version: 24.10.43
+  - apiVersion: v2
     appVersion: 24.10.42
     created: "2024-10-28T14:17:44.536165491Z"
     description: Metallb traffic manager for self-hosted k8
@@ -496,4 +536,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/metallb-24.10.41/metallb-24.10.41.tgz
     version: 24.10.41
-generated: "2024-10-28T14:17:44.536450487Z"
+generated: "2024-10-29T10:30:52.752537175Z"
