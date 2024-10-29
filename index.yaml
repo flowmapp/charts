@@ -696,4 +696,15 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/metallb-24.10.41/metallb-24.10.41.tgz
     version: 24.10.41
-generated: "2024-10-29T12:52:25.771462833Z"
+  vpn:
+  - apiVersion: v2
+    appVersion: 24.10.47
+    created: "2024-10-29T14:00:02.890004835Z"
+    description: VPN server
+    digest: 9c9ae98a51adde0ddcbacfe54b3d40583c1c7527aff20fa7d456caa5f68818eb
+    name: vpn
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/vpn-24.10.47/vpn-24.10.47.tgz
+    version: 24.10.47
+generated: "2024-10-29T14:00:02.890175383Z"
