@@ -313,6 +313,17 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/clusterissuer-24.10.41/clusterissuer-24.10.41.tgz
     version: 24.10.41
+  deployer:
+  - apiVersion: v2
+    appVersion: 24.10.47
+    created: "2024-10-31T10:59:38.110845521Z"
+    description: App for CD to react to docker hub hooks
+    digest: 7dede02df2c052161cf60b793254cc9370234ec1cd3f32163663805d12b26462
+    name: deployer
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/deployer-24.10.47/deployer-24.10.47.tgz
+    version: 24.10.47
   infra:
   - apiVersion: v2
     appVersion: 24.10.40
@@ -707,4 +718,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/vpn-24.10.47/vpn-24.10.47.tgz
     version: 24.10.47
-generated: "2024-10-29T14:00:02.890175383Z"
+generated: "2024-10-31T10:59:38.111028903Z"
