@@ -1,0 +1,20 @@
+replicas: 1
+
+port: 7676
+
+env:
+  prod:
+    image: flowmapp/deployer
+    host: rollout.prod.flowmapp.com
+  fallback:
+    image: flowmapp/deployer
+    host: rollout.fallback.flowmapp.com
+  staging:
+    image: flowmapp/deployer
+    host: rollout.staging.flowmapp.com
+  dev:
+    image: flowmapp/deployer
+    host: rollout.dev.flowmapp.com
+
+global:
+  namespace: deployer
