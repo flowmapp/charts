@@ -22,6 +22,7 @@ spec:
         namespace: {{ .Values.global.namespace }}
         app: {{ .Chart.Name }}
     spec:
+      serviceAccountName: deployer
       {{- if .Values.affinity }}
       affinity: {{ toYaml .Values.affinity | nindent 8 }}
       {{- else }}
