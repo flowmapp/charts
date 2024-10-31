@@ -1,5 +1,14 @@
 Usage (Linux only)
 
+Deployer
+```bash
+helm add flowmapp https://flowmapp.github.io/charts
+helm install deployer flowmapp/deployer \
+  --set-string global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
+  --set-string global.jtwBase64=$(cat ./jwt.txt | tr -d '\n' | base64 -w 0)
+  --set-string global.jtwCertBase64=$(cat ./jwt.cert | base64 -w 0)
+```
+
 Prod app
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
