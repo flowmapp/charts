@@ -1,4 +1,5 @@
 {{ define "fm.ingress" }}
+{{ $env :=  (index .Values.env .Values.global.currentEnv)}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -10,7 +11,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: {{ (index .Values.env .Values.global.currentEnv).host }}
+  - host: {{ $env.host }}
     http:
       paths:
       - path: /
@@ -20,8 +21,10 @@ spec:
             name: {{ .Chart.Name }}
             port:
               number: {{ .Values.port }}
+  {{- if $env.secretName }}
   tls:
     - hosts:
-      - {{ (index .Values.env .Values.global.currentEnv).host }}
-      secretName: {{ (index .Values.env .Values.global.currentEnv).secretName }}
+      - {{ $env.host }}
+      secretName: {{ $env.secretName }}
+  {{ end }}
 {{ end }}
