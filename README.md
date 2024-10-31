@@ -3,6 +3,13 @@ Usage (Linux only)
 Prod app
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
+helm install deployer flowmapp/deployer \
+  --set-string global.deployerJTWBase64=$(cat ./deployerJWT.txt | base64 -w 0)
+```
+
+Prod app
+```bash
+helm add flowmapp https://flowmapp.github.io/charts
 helm install app flowmapp/app \
   --set-string global.currentEnv=prod \
   --set-string global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
