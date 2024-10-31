@@ -23,6 +23,7 @@ jobs:
         run: |
           cp templates/*.tpl charts/app/templates
           cp templates/*.tpl charts/maestro/templates
+          cp templates/*.tpl charts/deployer/templates
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
