@@ -44,6 +44,9 @@ spec:
           {{- if .Values.volumeMounts }}
           volumeMounts: {{ toYaml .Values.volumeMounts | nindent 12 }}
           {{- end }}
+          {{- if .Values.global.env }}
+          env: {{ toYaml .Values.global.env | nindent 12 }}
+          {{- end }}
       {{- if .Values.volumeMounts }}
       volumes:
         - name: {{ (index .Values.volumeMounts 0).name }}
