@@ -12,7 +12,7 @@ helm add flowmapp https://flowmapp.github.io/charts
 helm install deployer flowmapp/deployer \
   --set global.server=us \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
-  --set global.env.K8_TOKEN=$(cat ./k8Token.txt | tr -d '\n' | base64 -w 0)
+  --set global.env.K8_TOKEN=$(cat ./k8Token.txt)
 ```
 
 Prod app
