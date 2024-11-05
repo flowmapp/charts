@@ -26,16 +26,17 @@ readinessProbe:
   periodSeconds: 30
   timeoutSeconds: 30
 
-env:
-  prod:
-    image: flowmapp/app-front
-    host: app.flowmapp.com
-    secretName: tls-flowmapp-wildcard
-  staging:
-    image: flowmapp/app-front-staging
-    host: app.staging.flowmapp.com
-    secretName: tls-front
-  dev:
-    image: flowmapp/app-front-dev
-    host: app.dev.flowmapp.com
-    secretName: tls-front
+image:
+  prod: flowmapp/app-front
+  staging: flowmapp/app-front-staging
+  dev: flowmapp/app-front-dev
+
+host:
+  prod: app.flowmapp.com
+  staging: app.staging.flowmapp.com
+  dev: app.dev.flowmapp.com
+
+secretName:
+  prod: tls-flowmapp-wildcard
+  staging: tls-front
+  dev: tls-front

@@ -2,16 +2,17 @@ replicas: 1
 
 port: 80
 
-env:
-  prod:
-    image: flowmapp/maestro-front
-    host: maestro.flowmapp.com
-    secretName: tls-flowmapp-wildcard
-  staging:
-    image: flowmapp/maestro-front-staging
-    host: maestro.staging.flowmapp.com
-    secretName: tls-front
-  dev:
-    image: flowmapp/maestro-front-dev
-    host: maestro.dev.flowmapp.com
-    secretName: tls-front
+image:
+  prod: flowmapp/maestro-front
+  staging: flowmapp/maestro-front-staging
+  dev: flowmapp/maestro-front-dev
+
+host:
+  prod: maestro.flowmapp.com
+  staging: maestro.staging.flowmapp.com
+  dev: maestro.dev.flowmapp.com
+
+secretName:
+  prod: tls-flowmapp-wildcard
+  staging: tls-front
+  dev: tls-front

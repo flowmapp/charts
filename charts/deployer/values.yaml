@@ -2,19 +2,17 @@ replicas: 1
 
 port: 7676
 
-env:
-  us:
-    image: flowmapp/deployer
-    host: us.flowmapp.com
-  ca:
-    image: flowmapp/deployer
-    host: ca.flowmapp.com
-  staging:
-    image: flowmapp/deployer
-    host: staging.flowmapp.com
-  dev:
-    image: flowmapp/deployer
-    host: dev.flowmapp.com
+image:
+  us: flowmapp/deployer
+  ca: flowmapp/deployer
+  staging: flowmapp/deployer
+  dev: flowmapp/deployer
+
+host:
+  us: us.flowmapp.com
+  ca: ca.flowmapp.com
+  staging: staging.flowmapp.com
+  dev: dev.flowmapp.com
 
 global:
   namespace: deployer

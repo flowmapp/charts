@@ -20,9 +20,9 @@ volumeMounts:
   - mountPath: /var/lib/mysql
     name: mysql
 
-env:
-  dev:
-    image: mysql:8.0.40
-    env:
-      - name: MYSQL_ROOT_PASSWORD
-        value: root1
+image:
+  dev: mysql:8.0.40
+
+global:
+  env:
+    MYSQL_ROOT_PASSWORD: root1

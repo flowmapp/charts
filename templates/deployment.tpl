@@ -29,10 +29,7 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ (index .Values.env .Values.global.currentEnv).image }}
-          {{- if (index .Values.env .Values.global.currentEnv).env }}
-          env: {{ toYaml (index .Values.env .Values.global.currentEnv).env | nindent 12 }}
-          {{- end }}
+          image: {{ index .Values.image .Values.global.server }}
           ports:
             - containerPort: {{ .Values.port }}
           {{- if .Values.startupProbe }}
@@ -44,9 +41,9 @@ spec:
           {{- if .Values.volumeMounts }}
           volumeMounts: {{ toYaml .Values.volumeMounts | nindent 12 }}
           {{- end }}
-          {{- if .Values.global.huyenv }}
+          {{- if .Values.global.env }}
           env:
-            {{- range $key, $val := .Values.global.huyenv }}
+            {{- range $key, $val := .Values.global.env }}
             - name: {{ $key }}
               value: {{ $val }}
             {{- end}}

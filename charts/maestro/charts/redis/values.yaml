@@ -2,10 +2,7 @@ replicas: 1
 
 port: 6379
 
-env:
-  prod:
-    image: redis
-  staging:
-    image: redis
-  dev:
-    image: redis
+image:
+  prod: redis
+  staging: redis
+  dev: redis

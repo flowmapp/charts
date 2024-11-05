@@ -1,5 +1,5 @@
 global:
-  currentEnv: prod
+  server: prod
   secretNamespaces:
     - app
     - maestro

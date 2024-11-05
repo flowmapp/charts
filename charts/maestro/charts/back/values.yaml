@@ -2,16 +2,17 @@ replicas: 1
 
 port: 4040
 
-env:
-  prod:
-    image: flowmapp/maestro-back
-    host: api.maestro.flowmapp.com
-    secretName: tls-back
-  staging:
-    image: flowmapp/maestro-back-staging
-    host: api.maestro.staging.flowmapp.com
-    secretName: tls-back
-  dev:
-    image: flowmapp/maestro-back-dev
-    host: api.maestro.dev.flowmapp.com
-    secretName: tls-back
+image:
+  prod: flowmapp/maestro-back
+  staging: flowmapp/maestro-back-staging
+  dev: flowmapp/maestro-back-dev
+
+host:
+  prod: api.maestro.flowmapp.com
+  staging: api.maestro.staging.flowmapp.com
+  dev: api.maestro.dev.flowmapp.com
+
+secretName:
+  prod: tls-back
+  staging: tls-back
+  dev: tls-back

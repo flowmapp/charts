@@ -27,16 +27,17 @@ readinessProbe:
   periodSeconds: 30
   timeoutSeconds: 10
 
-env:
-  prod:
-    image: flowmapp/app-back
-    host: api.flowmapp.com
-    secretName: tls-flowmapp-wildcard
-  staging:
-    image: flowmapp/app-back-staging
-    host: api.staging.flowmapp.com
-    secretName: tls-back
-  dev:
-    image: flowmapp/app-back-dev
-    host: api.dev.flowmapp.com
-    secretName: tls-back
+image:
+  prod: flowmapp/app-back
+  staging: flowmapp/app-back-staging
+  dev: flowmapp/app-back-dev
+
+host:
+  prod: api.flowmapp.com
+  staging: api.staging.flowmapp.com
+  dev: api.dev.flowmapp.com
+
+secretName:
+  prod: tls-flowmapp-wildcard
+  staging: tls-back
+  dev: tls-back
