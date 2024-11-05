@@ -6,8 +6,7 @@ helm add flowmapp https://flowmapp.github.io/charts
 helm install deployer flowmapp/deployer \
   --set global.currentEnv=us \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
-  --set global.k8KeyBase64=$(cat ./k8.key | base64 -w 0) \
-  --set global.k8CertBase64=$(cat ./k8.cert | base64 -w 0) \
+  --set global.k8Token=$(cat ./k8Token.txt | base64 -w 0) \
   --set global.tlsKeyBase64=$(cat ./tls.key | base64 -w 0) \
   --set global.tlsCertBase64=$(cat ./tls.cert | base64 -w 0)
 ```
