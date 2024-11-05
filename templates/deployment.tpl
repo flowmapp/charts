@@ -44,6 +44,13 @@ spec:
           {{- if .Values.volumeMounts }}
           volumeMounts: {{ toYaml .Values.volumeMounts | nindent 12 }}
           {{- end }}
+          {{- if .Values.global.huyenv }}
+          env:
+            {{- range $key, $val := .Values.global.env }}
+            - name: {{ $key }}
+              value: {{ $val }}
+            {{- end}}
+          {{- end }}
       {{- if .Values.volumeMounts }}
       volumes:
         - name: {{ (index .Values.volumeMounts 0).name }}
