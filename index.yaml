@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   app:
   - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:38.724542813Z"
+    description: Main app
+    digest: eba1ed331fdc0b78c137a0aa8496f7971520488e6f5c39b2ae56cf3584736065
+    name: app
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/app-24.10.67/app-24.10.67.tgz
+    version: 24.10.67
+  - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:09.991652174Z"
     description: Main app
@@ -434,6 +444,16 @@ entries:
     version: 24.10.41
   clusterissuer:
   - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:38.888736556Z"
+    description: Certificate issuer for cluster
+    digest: 2cb274e9aa4ee02fe6bc273db7975878458d832977bad6ce6f861dffa7faa761
+    name: clusterissuer
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/clusterissuer-24.10.67/clusterissuer-24.10.67.tgz
+    version: 24.10.67
+  - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:10.221154009Z"
     description: Certificate issuer for cluster
@@ -694,6 +714,16 @@ entries:
     - https://github.com/flowmapp/charts/releases/download/clusterissuer-24.10.41/clusterissuer-24.10.41.tgz
     version: 24.10.41
   deployer:
+  - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:39.095138638Z"
+    description: App for CD to react to docker hub hooks
+    digest: aec690e606aaead054e9f2718b116d15133375e23b615f65fc644bc761829a2e
+    name: deployer
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/deployer-24.10.67/deployer-24.10.67.tgz
+    version: 24.10.67
   - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:10.454945529Z"
@@ -976,6 +1006,16 @@ entries:
     - https://github.com/flowmapp/charts/releases/download/infra-24.10.33/infra-24.10.33.tgz
     version: 24.10.33
   maestro:
+  - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:39.245597919Z"
+    description: Admin panel for support
+    digest: 5f401006db68bffc82b2d00f8eefc7d69023345efb398d823e15eab13958e1d3
+    name: maestro
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/maestro-24.10.67/maestro-24.10.67.tgz
+    version: 24.10.67
   - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:10.636780032Z"
@@ -1398,6 +1438,16 @@ entries:
     version: 24.10.22
   metallb:
   - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:39.390638167Z"
+    description: Metallb traffic manager for self-hosted k8
+    digest: 3dd150c13a7875ea31bacd4a1d8bca829cef061fdbdd3cad9b78dd5c3b1ed4c8
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/metallb-24.10.67/metallb-24.10.67.tgz
+    version: 24.10.67
+  - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:10.806564499Z"
     description: Metallb traffic manager for self-hosted k8
@@ -1659,6 +1709,16 @@ entries:
     version: 24.10.41
   vpn:
   - apiVersion: v2
+    appVersion: 24.10.67
+    created: "2024-11-05T11:05:39.587124924Z"
+    description: VPN server
+    digest: d7529017c8912fb11f2be9140cd64e8424c8c66258de618abf2878779ff8ddfb
+    name: vpn
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/vpn-24.10.67/vpn-24.10.67.tgz
+    version: 24.10.67
+  - apiVersion: v2
     appVersion: 24.10.66
     created: "2024-11-05T10:58:10.957261702Z"
     description: VPN server
@@ -1858,4 +1918,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/vpn-24.10.47/vpn-24.10.47.tgz
     version: 24.10.47
-generated: "2024-11-05T10:58:10.958294707Z"
+generated: "2024-11-05T11:05:39.588295013Z"
