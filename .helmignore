@@ -21,3 +21,19 @@
 .idea/
 *.tmproj
 .vscode/
+
+deployment.yaml
+namespace.yaml
+ingress.yaml
+service.yaml
+tlsSecret.yaml
+clusterissuer.yaml
+metallb.yaml
+metallbConfig.yaml
+dockerSecret.yaml
+volume.yaml
+# charts/app
+# charts/clusterissuer
+# charts/maestro
+# charts/metallb
+# charts/vpn
