@@ -42,6 +42,12 @@ helm install vpn flowmapp/vpn \
   --set global.psk=8SnTFUmUZHAT8Jpn
 ```
 
+Metallb us
+```bash
+helm add flowmapp https://flowmapp.github.io/charts
+helm install metallb flowmapp/metallb --set global.server=us
+```
+
 Development debug
 ```bash
 helm template . \
