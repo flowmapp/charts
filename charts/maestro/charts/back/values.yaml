@@ -13,6 +13,6 @@ host:
   dev: api.maestro.dev.flowmapp.com
 
 secretName:
-  prod: tls-back
+  prod: tls-flowmapp-wildcard
   staging: tls-back
   dev: tls-back
