@@ -2057,6 +2057,17 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/metallb-24.10.41/metallb-24.10.41.tgz
     version: 24.10.41
+  slack:
+  - apiVersion: v2
+    appVersion: 24.10.74
+    created: "2024-11-06T12:37:56.51475335Z"
+    description: Slack birthday reminder
+    digest: 0ca1d7ab471bd3925fd3083cbea4fb348c540c20ade264b138c9218806d63c3c
+    name: slack
+    type: application
+    urls:
+    - https://github.com/flowmapp/charts/releases/download/slack-24.10.74/slack-24.10.74.tgz
+    version: 24.10.74
   vpn:
   - apiVersion: v2
     appVersion: 24.10.74
@@ -2338,4 +2349,4 @@ entries:
     urls:
     - https://github.com/flowmapp/charts/releases/download/vpn-24.10.47/vpn-24.10.47.tgz
     version: 24.10.47
-generated: "2024-11-06T12:16:01.719096016Z"
+generated: "2024-11-06T12:37:56.515161769Z"
