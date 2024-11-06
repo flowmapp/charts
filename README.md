@@ -10,7 +10,7 @@ Deployer
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
 helm install deployer flowmapp/deployer \
-  --set global.server=us \
+  --set global.server=<us|ca|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
   --set global.env.K8_TOKEN=$(cat ./k8Token.txt)
 ```
@@ -19,18 +19,20 @@ Prod app
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
 helm install app flowmapp/app \
-  --set global.server=prod \
+  --set global.server=<prod|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
   --set global.tlsKeyBase64=$(cat ./tls.key | base64 -w 0) \
   --set global.tlsCertBase64=$(cat ./tls.cert | base64 -w 0)
 ```
 
-Staging maestro
+Maestro
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
 helm install maestro flowmapp/maestro \
-  --set global.server=staging \
-  --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0)
+  --set global.server=<prod|staging|dev> \
+  --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
+  --set global.tlsKeyBase64=$(cat ./tls.key | base64 -w 0) \
+  --set global.tlsCertBase64=$(cat ./tls.cert | base64 -w 0)
 ```
 
 VPN
@@ -51,7 +53,7 @@ helm install metallb flowmapp/metallb --set global.server=us
 Development debug
 ```bash
 helm template . \
-  --set-string global.server=prod \
+  --set global.server=<prod|staging|dev> \
   --set-string global.dockerConfigBase64=$(cat ./config.json | base64) \
   --set-string global.tlsKeyBase64=$(cat ./tls.key | base64) \
   --set-string global.tlsCertBase64=$(cat ./tls.cert | base64)
