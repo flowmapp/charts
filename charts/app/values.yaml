@@ -2,4 +2,5 @@ global:
   namespace: app
 
   localDB:
+    staging: true
     dev: true
