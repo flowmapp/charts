@@ -8,7 +8,7 @@ image:
   dev: flowmapp/maestro-back-dev
 
 host:
-  prod: api.maestro.flowmapp.com
+  prod: apimaestro.flowmapp.com
   staging: api.maestro.staging.flowmapp.com
   dev: api.maestro.dev.flowmapp.com
 
