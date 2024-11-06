@@ -1,0 +1,11 @@
+replicas: 1
+
+port: 80
+
+image:
+  prod: flowmapp/slack
+  staging: flowmapp/slack
+  dev: flowmapp/slack
+
+global:
+  namespace: slack

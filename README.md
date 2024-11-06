@@ -44,7 +44,15 @@ helm install vpn flowmapp/vpn \
   --set global.psk=8SnTFUmUZHAT8Jpn
 ```
 
-Metallb us
+Slack birthday reminder
+```bash
+helm add flowmapp https://flowmapp.github.io/charts
+helm install deployer flowmapp/slack \
+  --set global.server=<us|ca|staging|dev> \
+  --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0)
+```
+
+Metallb
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
 helm install metallb flowmapp/metallb --set global.server=us
