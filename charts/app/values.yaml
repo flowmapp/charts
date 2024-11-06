@@ -1,5 +1,5 @@
 global:
   namespace: app
 
-localDB:
-  dev: true
+  localDB:
+    dev: true
