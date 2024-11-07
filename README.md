@@ -8,7 +8,7 @@ kubectl create token default --duration 87600h > k8Token.txt
 
 Deployer
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install deployer flowmapp/deployer \
   --set global.server=<us|ca|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
@@ -17,7 +17,7 @@ helm install deployer flowmapp/deployer \
 
 Prod app
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install app flowmapp/app \
   --set global.server=<prod|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
@@ -27,7 +27,7 @@ helm install app flowmapp/app \
 
 Maestro
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install maestro flowmapp/maestro \
   --set global.server=<prod|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0) \
@@ -37,7 +37,7 @@ helm install maestro flowmapp/maestro \
 
 VPN
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install vpn flowmapp/vpn \
   --set ip=1.2.3.4
   --set psk=yourpsk \
@@ -47,7 +47,7 @@ helm install vpn flowmapp/vpn \
 
 Slack birthday reminder
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install deployer flowmapp/slack \
   --set global.server=<us|ca|staging|dev> \
   --set global.dockerConfigBase64=$(cat ./config.json | base64 -w 0)
@@ -55,7 +55,7 @@ helm install deployer flowmapp/slack \
 
 Metallb
 ```bash
-helm add flowmapp https://flowmapp.github.io/charts
+helm repo add flowmapp https://flowmapp.github.io/charts
 helm install metallb flowmapp/metallb --set global.server=<us|ca|staging|dev>
 ```
 
