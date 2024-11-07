@@ -22,11 +22,7 @@ spec:
         namespace: {{ .Values.global.namespace }}
         app: {{ .Chart.Name }}
     spec:
-      {{- if .Values.affinity }}
-      affinity: {{ toYaml .Values.affinity | nindent 8 }}
-      {{- else }}
       affinity: {{ toYaml .Values.global.affinity | nindent 8 }}
-      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: {{ index .Values.image .Values.global.server }}
