@@ -39,9 +39,10 @@ VPN
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
 helm install vpn flowmapp/vpn \
-  --set global.psk=Vdit4eFAfmtNpbTMcvsi \
-  --set global.user=vpnuser \
-  --set global.psk=8SnTFUmUZHAT8Jpn
+  --set ip=1.2.3.4
+  --set psk=yourpsk \
+  --set user=vpnuser \
+  --set pass=yourpass
 ```
 
 Slack birthday reminder
@@ -55,7 +56,7 @@ helm install deployer flowmapp/slack \
 Metallb
 ```bash
 helm add flowmapp https://flowmapp.github.io/charts
-helm install metallb flowmapp/metallb --set global.server=us
+helm install metallb flowmapp/metallb --set global.server=<us|ca|staging|dev>
 ```
 
 Development debug

@@ -25,9 +25,11 @@ spec:
           - name: VPN_IPSEC_PSK
             value: {{ .Values.psk }}
           - name: VPN_USER
-            value: {{ .Values.global.user }}
+            value: {{ .Values.user }}
           - name: VPN_PASSWORD
             value: {{ .Values.pass }}
+          - name: VPN_PUBLIC_IP
+            value: {{ .Values.ip }}
           ports:
             - containerPort: 500
               hostPort: 500
