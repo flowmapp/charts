@@ -22,7 +22,20 @@ spec:
         namespace: {{ .Values.global.namespace }}
         app: {{ .Chart.Name }}
     spec:
-      affinity: {{ toYaml .Values.global.affinity | nindent 8 }}
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - ca-worker-1
+                  - ca-worker-2
+                  - us-worker-1
+                  - us-worker-2
+                  - dev
+                  - staging
       containers:
         - name: {{ .Chart.Name }}
           image: {{ index .Values.image .Values.global.server }}
