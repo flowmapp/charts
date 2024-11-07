@@ -2,5 +2,5 @@ apiVersion: v2
 name: back
 description: Main app backend
 type: application
-version: 24.10.77
-appVersion: 24.10.77
+version: 24.10.80
+appVersion: 24.10.80

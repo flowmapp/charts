@@ -21,6 +21,7 @@ volumeMounts:
     name: mysql
 
 image:
+  staging: mysql:8.0.40
   dev: mysql:8.0.40
 
 global:

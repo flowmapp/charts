@@ -22,7 +22,18 @@ spec:
   local:
     path: {{ (index .Values.volumeMounts 0).mountPath }}
   nodeAffinity:
-    required: {{ toYaml .Values.global.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution | nindent 6 }}
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+            - ca-worker-1
+            - ca-worker-2
+            - us-worker-1
+            - us-worker-2
+            - dev
+            - staging
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
