@@ -2,6 +2,9 @@ replicas: 1
 
 port: 80
 
+annotations:
+  cert-manager.io/cluster-issuer: letsencrypt
+
 image:
   prod: flowmapp/maestro-front
   staging: flowmapp/maestro-front-staging
