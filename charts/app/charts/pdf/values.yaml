@@ -1,0 +1,43 @@
+replicas: 1
+
+port: 12443
+
+annotations:
+  cert-manager.io/cluster-issuer: letsencrypt
+  nginx.ingress.kubernetes.io/proxy-body-size: 200m
+  nginx.ingress.kubernetes.io/proxy_read_timeout: "1800"
+
+
+startupProbe:
+  httpGet:
+    scheme: HTTP
+    path: /health?whoami=amazon
+    port: 12443
+  initialDelaySeconds: 5
+  timeoutSeconds: 5
+  failureThreshold: 60
+  periodSeconds: 5
+
+readinessProbe:
+  httpGet:
+    scheme: HTTP
+    path: /health?whoami=amazon
+    port: 12443
+  initialDelaySeconds: 5
+  periodSeconds: 30
+  timeoutSeconds: 10
+
+image:
+  prod: flowmapp/app-pdf
+  staging: flowmapp/app-pdf-staging
+  dev: flowmapp/app-pdf-dev
+
+host:
+  prod: pdf.flowmapp.com
+  staging: pdf.staging.flowmapp.com
+  dev: pdf.dev.flowmapp.com
+
+secretName:
+  prod: tls-flowmapp-wildcard
+  staging: tls-pdf
+  dev: tls-pdf

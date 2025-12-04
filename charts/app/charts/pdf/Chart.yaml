@@ -1,6 +1,6 @@
 apiVersion: v2
-name: app
-description: Main app
+name: pdf
+description: PDF export for sitemaps
 type: application
 version: 25.12.01
 appVersion: 25.12.01
